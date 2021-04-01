@@ -1,6 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+:root {
+    --bg-start-color: rgba(255, 51, 0, 0.781);
+    --bg-end-color: rgba(255, 51, 0, 0.568);
+    --dark-text: rgba(1, 1, 17, 0.705);
+    --complete-bg: rgb(250, 241, 241);
+    --grey-bg: rgba(134, 131, 131, 0.637);
+    --dark-bg: rgba(8, 7, 44, 0.616);
+    --light-text: rgb(255, 255, 255);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Overpass, sans-serif;
+    max-width: 1700px;
+    font-size: 16px;
+    background: var(--complete-bg);
+}
+
 div.header {
     height: 300px;
-    background: url(../images/bg-pattern-intro.svg) center scroll no-repeat, linear-gradient(to right, rgba(255, 51, 0, 0.781), rgba(255, 51, 0, 0.568));
+    background: url(../images/bg-pattern-intro.svg) center scroll no-repeat, linear-gradient(to right, var(--bg-start-color), var(--bg-end-color));
     display: block;
     border-radius: 0% 0% 0% 10%;
+    color: ivory;
 }
+
+div.middle-top {
+    height: 600px;
+    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
+    background-position-x: 1150px;
+    background-position-y: center;
+    background-size: 500px 500px;
+    background-clip: border-box;
+    display: block;
+    color: var(--dark-text);
+}
+
+div.middle-mid {
+    height: 200px;
+    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
+    background-position-x: 25px;
+    background-position-y: center;
+    background-size: 500px 500px;
+    background-clip: border-box;
+    display: block;
+    color: var(--light-text);
+}
+
+
+/*
+div.middle-mid {
+    height: 200px;
+    background: linear-gradient(to right, var(--bg-start-color), var(--bg-end-color));
+    background-position-x: 25px;
+    background-position-y: center;
+    background-clip: border-box;
+    display: block;
+    color: var(--light-text);
+}*/
+
+@media only screen and (min-width:600px) {}
+
+@media only screen and (min-width:1860px) {}
