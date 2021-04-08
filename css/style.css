@@ -36,14 +36,59 @@ div.header {
     color: ivory;
 }
 
-div.middle-top,
+.backgroundImageCVR {
+    position: relative;
+    padding: 15px;
+}
+
+
+/*
+.middle-top,
 .middle-bottom {
+    position: inherit;
     height: 700px;
     background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
-    backdrop-filter: greyscale();
+    filter: grayscale(0.7), opacity(0.1);
     background-size: 500px 500px;
     background-clip: border-box;
     display: block;
+    color: var(--dark-text);
+    z-index: 1;
+}
+
+.content-1 {
+    position: relative;
+    color: red;
+    font-size: large;
+    z-index: 2;
+}
+*/
+
+.middle-top,
+.middle-bottom {
+    position: relative;
+    padding: 15px;
+    height: 700px;
+}
+
+.middle-top-image,
+.middle-bottom-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
+    background-size: 600px 600px;
+    background-clip: border-box;
+    z-index: 1;
+    filter: grayscale(0.9) opacity(0.5);
+}
+
+.middle-top-content,
+.middle-bottom-content {
+    position: relative;
+    z-index: 2;
     color: var(--dark-text);
 }
 
@@ -60,18 +105,18 @@ div.middle-mid {
     color: var(--light-text);
 }
 
-div.middle-top {
+.middle-top-image {
     background-position-x: 1150px;
     background-position-y: center;
 }
 
-div.middle-bottom {
-    background-position-x: -100px;
+.middle-bottom-image {
+    background-position-x: -200px;
     background-position-y: center;
 }
 
 div.footer {
-    height: 500px;
+    height: 300px;
     background-color: var(--footer-bg);
     border-radius: 0px 100px 0px 0px;
     color: var(--light-text);
