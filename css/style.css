@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+:root {
+    --bg-start-color: rgba(255, 51, 0, 0.781);
+    --bg-end-color: rgba(255, 51, 0, 0.568);
+    --dark-text: rgba(1, 1, 17, 0.705);
+    --complete-bg: rgb(250, 241, 241);
+    --grey-bg: rgba(134, 131, 131, 0.637);
+    --dark-bg: rgba(5, 4, 24, 0.884);
+    --light-text: rgb(255, 255, 255);
+    --footer-bg: rgb(19, 21, 24);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    smooth-behaviour: smooth;
+}
+
+body {
+    font-family: Overpass, sans-serif;
+    width: max-width;
+    font-size: 16px;
+    background: var(--complete-bg);
+}
+
+div.header {
+    height: 400px;
+    background: url(../images/bg-pattern-intro.svg) center scroll no-repeat, linear-gradient(to right, var(--bg-start-color), var(--bg-end-color));
+    display: block;
+    border-radius: 0px 0px 0px 100px;
+    color: ivory;
+}
+
+div.middle-top,
+.middle-bottom {
+    height: 700px;
+    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
+    backdrop-filter: greyscale();
+    background-size: 500px 500px;
+    background-clip: border-box;
+    display: block;
+    color: var(--dark-text);
+}
+
+div.middle-mid {
+    height: 350px;
+    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
+    background-color: var(--dark-bg);
+    background-position-x: -150px;
+    background-position-y: -300px;
+    background-size: 700px 700px;
+    background-clip: border-box;
+    border-radius: 0px 100px 0px 100px;
+    display: block;
+    color: var(--light-text);
+}
+
+div.middle-top {
+    background-position-x: 1150px;
+    background-position-y: center;
+}
+
+div.middle-bottom {
+    background-position-x: -100px;
+    background-position-y: center;
+}
+
+div.footer {
+    height: 500px;
+    background-color: var(--footer-bg);
+    border-radius: 0px 100px 0px 0px;
+    color: var(--light-text);
+}
+
+@media only screen and (min-width:600px) {}
+
+@media only screen and (min-width:1860px) {}
