@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
 :root {
-    --bg-start-color: rgba(255, 51, 0, 0.781);
-    --bg-end-color: rgba(255, 51, 0, 0.568);
+    --bg-start-color: rgba(255, 51, 0, 0.568);
+    --bg-end-color: rgb(237, 52, 64);
     --dark-text: rgba(1, 1, 17, 0.705);
     --complete-bg: rgb(250, 241, 241);
     --grey-bg: rgba(134, 131, 131, 0.637);
-    --dark-bg: rgba(5, 4, 24, 0.884);
+    --dark-bg-start: rgba(5, 4, 24, 0.884);
+    --dark-bg-end: rgba(18, 14, 87, 0.884);
     --light-text: rgb(255, 255, 255);
-    --footer-bg: rgb(19, 21, 24);
+    --footer-bg: rgb(38, 42, 49);
 }
 
 * {
@@ -28,47 +29,58 @@ body {
     background: var(--complete-bg);
 }
 
-div.header {
-    height: 400px;
-    background: url(../images/bg-pattern-intro.svg) center scroll no-repeat, linear-gradient(to right, var(--bg-start-color), var(--bg-end-color));
+
+/*Styles for every section */
+
+.header {
+    height: 600px;
+    position: relative;
+    padding: 15px;
+    background: linear-gradient(to right, var(--bg-start-color), var(--bg-end-color));
     display: block;
     border-radius: 0px 0px 0px 100px;
-    color: ivory;
 }
 
-.backgroundImageCVR {
-    position: relative;
-    padding: 15px;
-}
-
-
-/*
 .middle-top,
 .middle-bottom {
-    position: inherit;
+    position: relative;
+    padding: 15px;
     height: 700px;
-    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
-    filter: grayscale(0.7), opacity(0.1);
-    background-size: 500px 500px;
-    background-clip: border-box;
+}
+
+.middle-mid {
+    position: relative;
+    padding: 15px;
+    height: 350px;
+    background: linear-gradient(to right, var(--dark-bg-start), var(--dark-bg-end));
     display: block;
-    color: var(--dark-text);
+    border-radius: 0px 100px 0px 100px;
+}
+
+.footer {
+    height: 300px;
+    background-color: var(--footer-bg);
+    border-radius: 0px 100px 0px 0px;
+    color: var(--light-text);
+    display: block;
+    position: relative;
+}
+
+
+/*Images as background styles */
+
+.header-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../images/bg-pattern-intro.svg) center scroll no-repeat;
+    background-clip: border-box;
     z-index: 1;
-}
-
-.content-1 {
-    position: relative;
-    color: red;
-    font-size: large;
-    z-index: 2;
-}
-*/
-
-.middle-top,
-.middle-bottom {
-    position: relative;
-    padding: 15px;
-    height: 700px;
+    background-position-x: -350px;
+    background-position-y: -1260px;
+    background-size: 3000px 3000px;
 }
 
 .middle-top-image,
@@ -85,26 +97,6 @@ div.header {
     filter: grayscale(0.9) opacity(0.5);
 }
 
-.middle-top-content,
-.middle-bottom-content {
-    position: relative;
-    z-index: 2;
-    color: var(--dark-text);
-}
-
-div.middle-mid {
-    height: 350px;
-    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
-    background-color: var(--dark-bg);
-    background-position-x: -150px;
-    background-position-y: -300px;
-    background-size: 700px 700px;
-    background-clip: border-box;
-    border-radius: 0px 100px 0px 100px;
-    display: block;
-    color: var(--light-text);
-}
-
 .middle-top-image {
     background-position-x: 1150px;
     background-position-y: center;
@@ -115,11 +107,57 @@ div.middle-mid {
     background-position-y: center;
 }
 
-div.footer {
-    height: 300px;
-    background-color: var(--footer-bg);
-    border-radius: 0px 100px 0px 0px;
+.middle-mid-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
+    background-position-x: -150px;
+    background-position-y: -450px;
+    background-size: 900px 900px;
+    background-clip: border-box;
+    z-index: 1;
+}
+
+
+/* Styles for every section's content*/
+
+.header-content {
+    position: relative;
+    z-index: 2;
     color: var(--light-text);
+}
+
+.middle-top-content,
+.middle-bottom-content {
+    position: relative;
+    z-index: 2;
+    color: var(--dark-text);
+}
+
+.middle-mid-content {
+    position: relative;
+    z-index: 2;
+    color: var(--light-text);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-width;
+}
+
+.footer-centered-content {
+    margin-top: 100px;
+}
+
+.footer-part {
+    display: inline-block;
+    width: 20%;
+    margin-right: 30px;
 }
 
 @media only screen and (min-width:600px) {}
