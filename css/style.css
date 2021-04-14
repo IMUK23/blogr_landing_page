@@ -45,20 +45,21 @@ body {
 .middle-bottom {
     position: relative;
     padding: 15px;
-    height: 700px;
+    height: 1000px;
+    display: flex;
 }
 
 .middle-mid {
     position: relative;
     padding: 15px;
-    height: 350px;
+    height: 400px;
     background: linear-gradient(to right, var(--dark-bg-start), var(--dark-bg-end));
     display: block;
     border-radius: 0px 100px 0px 100px;
 }
 
 .footer {
-    height: 300px;
+    height: 400px;
     background-color: var(--footer-bg);
     border-radius: 0px 100px 0px 0px;
     color: var(--light-text);
@@ -83,27 +84,14 @@ body {
     background-size: 3000px 3000px;
 }
 
-.middle-top-image,
-.middle-bottom-image {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: url(../images/bg-pattern-circles.svg) right scroll no-repeat;
-    background-size: 600px 600px;
-    background-clip: border-box;
-    z-index: 1;
-    filter: grayscale(0.9) opacity(0.5);
+img.middle-bottom-image {
+    position: relative;
+    top: -10%;
+    left: -55%;
 }
 
 .middle-top-image {
     background-position-x: 1150px;
-    background-position-y: center;
-}
-
-.middle-bottom-image {
-    background-position-x: -200px;
     background-position-y: center;
 }
 
@@ -121,6 +109,11 @@ body {
     z-index: 1;
 }
 
+.middle-img {
+    position: relative;
+    left: 50%;
+}
+
 
 /* Styles for every section's content*/
 
@@ -128,6 +121,17 @@ body {
     position: relative;
     z-index: 2;
     color: var(--light-text);
+    height: 100%;
+}
+
+.header-content>#header-top {
+    display: block;
+    height: 40%;
+}
+
+.header-content>#header-bottom {
+    display: block;
+    height: 60%;
 }
 
 .middle-top-content,
@@ -135,29 +139,144 @@ body {
     position: relative;
     z-index: 2;
     color: var(--dark-text);
+    box-sizing: border-box;
+}
+
+#top-heading {
+    display: block;
+    height: 25%;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#top-heading>.top-content {
+    display: block;
+    transform: translate(40%, 300%);
+}
+
+.middle-top-content>.left {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    padding: 5% 3% 5% 7%;
+    transform: translateY(-5%);
+}
+
+.middle-top-content>.left>#head {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.middle-top-content>.left>#cont {
+    display: block;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.middle-top-content>.right {
+    display: inline-block;
+    width: 30%;
+    transform: translate(25%, -22%);
 }
 
 .middle-mid-content {
-    position: relative;
+    position: absolute;
     z-index: 2;
     color: var(--light-text);
+    box-sizing: border-box;
+}
+
+div.middle-bottom-content>div.left {
+    display: absolute;
+    float: left;
+    width: 50%;
+    margin-top: 100px;
+    padding-left: 90px;
+    overflow: hidden;
+}
+
+div.middle-mid-content>div.left {
+    display: inline-block;
+    bottom: 50%;
+    float: left;
+    width: 50%;
+    transform: translate(15%, -15%);
+}
+
+div.middle-mid-content>div.right {
+    display: inline-block;
+    width: 38%;
+    overflow-wrap: break-word;
+    float: left;
+    transform: translate(-5%, 50%);
+}
+
+#right-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#right-content {
+    font-size: 1.2rem;
+}
+
+div.middle-bottom-content>div.right {
+    display: absolute;
+    margin-top: 270px;
+    width: 40%;
+    float: left;
+}
+
+div.middle-bottom-content>div.right>div.up {
+    display: block;
+    margin-bottom: 100px;
+}
+
+#up-heading {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+div.middle-bottom-content>div.right>div.down {
+    display: block;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     width: max-width;
+    margin-top: 20px;
+    ;
 }
 
 .footer-centered-content {
-    margin-top: 100px;
+    display: flex;
+    margin-right: 20px;
+    margin-left: 180px;
 }
 
 .footer-part {
     display: inline-block;
-    width: 20%;
-    margin-right: 30px;
+    position: center;
+    width: 24%;
+    margin-right: 10px;
+    margin-top: 80px;
+}
+
+.blogrfoot {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 999;
+}
+
+.productfoot {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 @media only screen and (min-width:600px) {}
