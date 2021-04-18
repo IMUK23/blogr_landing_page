@@ -27,6 +27,7 @@
         font-size: 16px;
         background: var(--complete-bg);
         text-align: center;
+        overflow-x: hidden;
     }
     .header {
         height: 900px;
@@ -36,7 +37,12 @@
         display: block;
         border-radius: 0px 0px 0px 100px;
     }
-    .middle-top,
+    .middle-top {
+        position: relative;
+        padding: 15px;
+        height: 1000px;
+        display: flex;
+    }
     .middle-bottom {
         position: relative;
         padding: 15px;
@@ -230,46 +236,36 @@
     }
     .middle-top-content,
     .middle-bottom-content {
-        position: relative;
-        z-index: 2;
         color: var(--dark-text);
         box-sizing: border-box;
     }
     #top-heading {
         display: block;
-        height: 25%;
+        height: 10%;
         font-size: 2rem;
         font-weight: bolder;
     }
     #top-heading>.top-content {
         display: block;
-        transform: translate(40%, 300%);
+        margin-top: 100px;
     }
     .middle-top-content>.left {
-        display: inline-block;
-        width: 50%;
-        float: left;
-        padding: 5% 3% 5% 7%;
-        transform: translate(10%, -5%);
+        display: block;
+        text-align: center;
     }
     .middle-top-content>.left>#head {
         display: block;
         font-size: 1.5rem;
         margin-bottom: 20px;
-        text-align: left;
         font-weight: bolder;
     }
     .middle-top-content>.left>#cont {
         display: block;
-        width: 85%;
-        margin-bottom: 60px;
-        text-align: left;
-        font-weight: bolder;
+        font-size: 0.8rem;
+        margin-bottom: 40px;
     }
     .middle-top-content>.right {
-        display: inline-block;
-        width: 30%;
-        transform: translate(25%, -22%);
+        display: none;
     }
     .middle-mid-content {
         position: absolute;
@@ -355,6 +351,7 @@
         margin-top: 100px;
         font-weight: bolder;
         margin-bottom: 30px;
+        transform: translateX(-35%);
     }
     .productfoot {
         display: block;
@@ -381,6 +378,7 @@
         width: max-width;
         font-size: 16px;
         background: var(--complete-bg);
+        overflow-x: hidden;
     }
     /*Styles for every section */
     .header {
@@ -603,6 +601,9 @@
         float: left;
         padding: 5% 3% 5% 7%;
         transform: translate(10%, -5%);
+    }
+    .middle-top-content>.left>.div-for-mobile {
+        display: none;
     }
     .middle-top-content>.left>#head {
         display: block;
