@@ -21,7 +21,7 @@ function product() {
         hideproduct();
     } else {
         document.getElementById("item-2-content").style.display = "block";
-        document.getElementById("item-2-content").style.backgroundColor = "rgb(0,0,0)";
+        document.getElementById("item-2-content").style.backgroundColor = "rgba(206, 203, 203, 0.76)";
         hidecompany();
         hideconnect();
     }
@@ -36,6 +36,7 @@ function company() {
         hidecompany();
     } else {
         document.getElementById("item-3-content").style.display = "block";
+        document.getElementById("item-3-content").style.backgroundColor = "rgba(206, 203, 203, 0.76)";
         hideproduct();
         hideconnect();
     }
@@ -50,6 +51,7 @@ function connect() {
         hideconnect();
     } else {
         document.getElementById("item-4-content").style.display = "block";
+        document.getElementById("item-4-content").style.backgroundColor = "rgba(206, 203, 203, 0.76)";
         hidecompany();
         hideproduct();
     }
